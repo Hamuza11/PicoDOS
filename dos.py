@@ -87,8 +87,12 @@ while True:
             del f
             continue
     elif arg[0]=="cls":
-        s.cls()
-        continue
+        try:
+            s.cls()
+        except:
+            print("\n"*30)
+        finally:
+            continue
     elif arg[0]=="username":
         try:
             user=arg[1]
